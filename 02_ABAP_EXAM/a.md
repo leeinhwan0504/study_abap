@@ -54,7 +54,7 @@ FORM build_fieldcatalog.
   fieldcatalog-fieldname   = 'CARRID'.
   fieldcatalog-seltext_m   = 'Airline Code'.
   fieldcatalog-col_pos     = 0.
-  <font color="red">fieldcatalog-key         = 'X'. </font>
+  fieldcatalog-key         = 'X'.
 *  fieldcatalog-emphasize   = 'C100'.
   APPEND fieldcatalog TO fieldcatalog.
   CLEAR  fieldcatalog.
