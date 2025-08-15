@@ -149,4 +149,6 @@ FORM data_retrieval.
     INTO TABLE it_sflight.
 
 ENDFORM.                    " DATA_RETRIEVAL
-``
+```
+![실행결과](image/result.png)
+
