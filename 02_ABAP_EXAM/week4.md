@@ -124,7 +124,7 @@ FORM data_retrieval.
 ENDFORM.
 ```
 
-![실행결과](image/image4.PNG)
+![실행결과](image/image4.png)
 
 
 
