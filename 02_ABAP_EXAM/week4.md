@@ -155,4 +155,4 @@ FORM build_sort .
 ENDFORM.
 ```
 
-![실행결과](image/image4_1.png)
+![실행결과](image/image_4.png)
