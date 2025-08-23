@@ -25,8 +25,8 @@ TYPES: BEGIN OF t_sflight,
 
 DATA: it_sflight TYPE STANDARD TABLE OF t_sflight INITIAL SIZE 0,
       wa_sflight TYPE t_sflight,
-      it_sort TYPE slis_t_sortinfo_alv,
-      ls_sort TYPE slis_sortinfo_alv.
+      it_sort    TYPE slis_t_sortinfo_alv,
+      ls_sort    TYPE slis_sortinfo_alv.
 
 
 DATA: fieldcatalog TYPE slis_t_fieldcat_alv WITH HEADER LINE,
