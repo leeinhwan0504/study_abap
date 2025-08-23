@@ -136,7 +136,6 @@ ENDFORM.
 *& -->  p1        text
 *& <--  p2        text
 *&---------------------------------------------------------------------*
-DATA: is_sort TYPE slis_t_sortinfo_alv.
 
 FORM build_sort .
   ls_sort-spos = 1.
