@@ -167,5 +167,5 @@ FORM data_retrieval.
 
 ENDFORM.
 ```
-![실행결과](image/image_6_1.PNG)
-![실행결과](image/image_6_2.PNG)
+![실행결과](image/image6_1.PNG)
+![실행결과](image/image6_2.PNG)
