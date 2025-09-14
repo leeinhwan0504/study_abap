@@ -18,11 +18,11 @@ TYPE-POOLS: slis.                                 "ALV Declarations
 *Data Declaration
 *----------------
 TYPES: BEGIN OF t_scarr,
-  mandt    TYPE scarr-mandt,    " scarr 테이블의 mandt 필드의 구조(Type, 자리수)를 가져온다.
-  carrid   TYPE scarr-carrid,
-  carrname TYPE scarr-carrname,
-  currcode TYPE scarr-currcode,
-  url      TYPE scarr-url,
+  mandt    TYPE scarr-mandt,      " scarr 테이블의 mandt 필드의 구조(Type, 자리수)를 가져온다.
+  carrid   TYPE scarr-carrid,     " 항공사 코드 (CHAR 3 - AA, AZ). 
+  carrname TYPE scarr-carrname,   " 항공사 이름 (예: American Airlines, Lufthansa)
+  currcode TYPE scarr-currcode,   " 해당 항공사의 현지 통화 코드 (예: USD)
+  url      TYPE scarr-url,        " 항공사 홈페이지
  END OF t_scarr.
 
 * TABLE OF : 테이블 선언(occurs 안쓰고 만들기)
