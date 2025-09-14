@@ -157,3 +157,5 @@ FORM data_retrieval.
 
 ENDFORM.                    " DATA_RETRIEVAL
 ```
+
+![실행결과](image/01_exam_scarr02.PNG)
