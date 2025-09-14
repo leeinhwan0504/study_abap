@@ -205,4 +205,4 @@ FORM data_retrieval.
 
 ENDFORM.                    " DATA_RETRIEVAL
 ```
-
+![실행결과](image/02_exam_spflight02.PNG)
