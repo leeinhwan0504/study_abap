@@ -221,7 +221,7 @@ FORM data_retrieval.
     INTO TABLE it_spfli.
 
 ENDFORM.                    " DATA_RETRIEVAL
-
+```
 ![실행결과](image/03_exam_spfli_02.PNG)
 
 **항공편(Flight) 연결 정보**
@@ -229,4 +229,3 @@ ENDFORM.                    " DATA_RETRIEVAL
 " AA 항공사의 0017 항공편은 New York (JFK)에서 San Francisco (SFO)로 이동하며,
 " 비행 시간은 361분입니다.
 " 거리는 2,572마일이며, 출발 시간은 11:00:01이고 도착 시간은 14:01:01 입니다.
-```
