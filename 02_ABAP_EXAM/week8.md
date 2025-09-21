@@ -207,3 +207,5 @@ FORM data_retrieval.
 ENDFORM.
 ```
 
+![실행결과](image/image8_1.PNG)
+![실행결과](image/image8_2.PNG)
