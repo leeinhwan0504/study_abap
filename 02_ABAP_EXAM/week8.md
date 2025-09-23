@@ -94,12 +94,15 @@ FORM build_fieldcatalog.
   fieldcatalog-fieldname   = 'BOOKID'.
   fieldcatalog-seltext_m   = 'Booking number'.
   fieldcatalog-key         = 'X'.
+  fieldcatalog-lzero       = 'X'.
   fieldcatalog-col_pos     = 3.
   APPEND fieldcatalog TO fieldcatalog.
   CLEAR  fieldcatalog.
 
   fieldcatalog-fieldname   = 'CUSTOMID'.
   fieldcatalog-seltext_m   = 'Customer Number'.
+  fieldcatalog-lzero       = 'X'.
+  fieldcatalog-hotspot     = 'X'.
   fieldcatalog-col_pos     = 4.
   APPEND fieldcatalog TO fieldcatalog.
   CLEAR  fieldcatalog.
@@ -183,7 +186,10 @@ FORM data_retrieval.
     SELECT carrid connid fldate bookid customid loccuram loccurkey order_date cancelled
     FROM sbook
     INTO TABLE it_sbook
-    WHERE customid IN s_cid.
+    WHERE customid IN s_cid
+      AND carrid = s_carrid
+      AND connid = s_connid
+      AND fldate = s_fldate.
   ELSEIF r2 = 'X'.
     SELECT carrid connid fldate bookid customid loccuram loccurkey order_date cancelled
     FROM sbook
