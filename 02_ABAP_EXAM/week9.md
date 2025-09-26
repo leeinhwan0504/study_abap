@@ -390,3 +390,5 @@ ENDFORM.
 ![실행결과](image/image9_2.PNG)
 ![실행결과](image/image9_3.PNG)
 ![실행결과](image/image9_4.PNG)
+![실행결과](image/image9_5.PNG)
+![실행결과](image/image9_6.PNG)
