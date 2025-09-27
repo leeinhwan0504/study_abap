@@ -181,7 +181,7 @@ FORM build_fieldcatalog.
   CLEAR  fieldcatalog.
 
   fieldcatalog-fieldname   = 'CONNID'.
-  fieldcatalog-seltext_m   = 'Customer Number'.
+  fieldcatalog-seltext_m   = 'Flight Connection Number'.
   fieldcatalog-key         = 'X'.
   fieldcatalog-lzero       = 'X'.
   fieldcatalog-col_pos     = 1.
