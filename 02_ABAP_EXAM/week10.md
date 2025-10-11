@@ -134,7 +134,7 @@ ENDFORM.                    " BUILD_FIELDCATALOG
 *&---------------------------------------------------------------------*
 *&      Form  DATA_RETRIEVAL
 *&---------------------------------------------------------------------*
-*       Retrieve data form EKPO table and populate itab it_ekko
+*       Retrieve data form sflight table and populate itab sflight
 *----------------------------------------------------------------------*
 FORM data_retrieval.
 
