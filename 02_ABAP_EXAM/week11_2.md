@@ -154,4 +154,5 @@ FORM data_retrieval.
 ENDFORM.                    " DATA_RETRIEVAL
 ```
 
-
+![실행결과](image/image11_2_1.PNG) <br>
+![실행결과](image/image11_2_2.PNG)
