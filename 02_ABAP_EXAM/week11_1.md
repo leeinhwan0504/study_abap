@@ -23,7 +23,7 @@ TYPES: BEGIN OF t_sflight,
        END OF t_sflight.
 
 
-DATA: it_sflight TYPE SORTED TABLE OF t_sflight WITH NON-UNIQUE KEY carrid connid fldate,
+DATA: it_sflight TYPE SORTED TABLE OF t_sflight WITH UNIQUE KEY carrid connid fldate,
       wa_sflight TYPE t_sflight.
 
 DATA: it_collect TYPE STANDARD TABLE OF t_sflight INITIAL SIZE 0,
