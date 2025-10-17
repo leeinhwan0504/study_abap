@@ -143,7 +143,7 @@ FORM data_retrieval.
    WHERE carrid IN s_carrid.
 
 
-  SORT it_sflight BY carrid.
+  SORT it_sflight BY carrid ASCENDING.
 
   LOOP AT it_sflight INTO wa_sflight.
     AT END OF carrid.
