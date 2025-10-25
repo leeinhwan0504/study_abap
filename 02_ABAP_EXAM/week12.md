@@ -536,5 +536,5 @@ FORM data_retrieval.
 ENDFORM.
 ```
 
-![실행결과](image/image12_1.png) <br>
-![실행결과](image/image12_2.png)
+![실행결과](image/image12_1_1.png) <br>
+![실행결과](image/image12_1_2.png)
