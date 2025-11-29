@@ -1,4 +1,4 @@
-```pyton
+```abap
 PROCESS BEFORE OUTPUT.
 
  MODULE STATUS_0100.
