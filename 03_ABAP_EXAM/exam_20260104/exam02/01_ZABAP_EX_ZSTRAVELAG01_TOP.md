@@ -1,3 +1,4 @@
+```abap
 *&---------------------------------------------------------------------*
 *& Include          ZABAP_EX_ZSTRAVELAG01_TOP
 *&---------------------------------------------------------------------*
@@ -76,4 +77,6 @@ DATA: fcode    TYPE TABLE OF sy-ucomm,
 
 DATA: it_cp       TYPE TABLE OF ZSTRAVELAG WITH HEADER LINE,
       it_changes  TYPE TABLE OF ZSTRAVELAG WITH HEADER LINE,
+
       it_deletes  TYPE TABLE OF ZSTRAVELAG WITH HEADER LINE.
+``
