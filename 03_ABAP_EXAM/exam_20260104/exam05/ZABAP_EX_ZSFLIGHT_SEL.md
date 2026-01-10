@@ -1,3 +1,4 @@
+```abap
 *&---------------------------------------------------------------------*
 *& Include          ZABAP_EX_ZSFLIGHT_SEL
 *&---------------------------------------------------------------------*
@@ -13,4 +14,6 @@ PARAMETERS: r1 RADIOBUTTON GROUP rad DEFAULT 'X',
 SELECTION-SCREEN END OF BLOCK BL02.
 * FUNCTION KEY
 SELECTION-SCREEN: FUNCTION KEY 1.
+
 SELECTION-SCREEN: FUNCTION KEY 3.
+```
