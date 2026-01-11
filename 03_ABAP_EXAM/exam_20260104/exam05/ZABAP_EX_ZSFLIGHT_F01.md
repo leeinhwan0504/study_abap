@@ -215,7 +215,7 @@ FORM upload_from_excel .
          wa_dd03l TYPE t_dd03l.
 
   SELECT FIELDNAME, POSITION, INTTYPE, DECIMALS FROM DD03L
-    WHERE TABNAME = 'ZSPFLI'
+    WHERE TABNAME = 'ZSFLIGHT'          " 수정
     INTO TABLE @it_dd03l.
 
   SORT it_dd03l BY POSITION.
@@ -545,7 +545,7 @@ FORM download_excel_smpl  USING    p_fname.
   APPEND lt_clip.
   CLEAR lt_clip.
 
-  SELECT * FROM ZSFLIGHT INTO TABLE TAB1.    " 수정15
+  SELECT * FROM SFLIGHT INTO TABLE TAB1.    " SFLIGHT 로 할 것. 수정15
 *     UP TO 2 ROWS.
 
 
@@ -1369,6 +1369,6 @@ CALL METHOD OF go_application 'selection' = lo_selection.
 SET PROPERTY OF lo_column 'NumberFormatLocal' = p_format.
 
 
-
 ENDFORM.
 ```
+
