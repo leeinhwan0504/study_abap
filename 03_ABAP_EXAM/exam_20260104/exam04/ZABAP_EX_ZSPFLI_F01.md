@@ -1,3 +1,4 @@
+```abap
 *&---------------------------------------------------------------------*
 *& Include          ZABAP_EX_ZSTRAVELAG01_F01
 *&---------------------------------------------------------------------*
@@ -1418,4 +1419,6 @@ CALL METHOD OF go_application 'selection' = lo_selection.
 SET PROPERTY OF lo_column 'NumberFormatLocal' = p_format.
 
 
+
 ENDFORM.
+```
