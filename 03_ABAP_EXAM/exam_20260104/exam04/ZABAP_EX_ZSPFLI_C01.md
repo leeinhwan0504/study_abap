@@ -1,3 +1,4 @@
+```abap
 *&---------------------------------------------------------------------*
 *& Include          ZABAP_EX_ZSTRAVELAG01_C01
 *&---------------------------------------------------------------------*
@@ -46,4 +47,6 @@ CLASS lcl_event_receiver IMPLEMENTATION.
     call TRANSACTION 'SE11' WITHOUT AUTHORITY-CHECK.
   ENDMETHOD.
 
+
 ENDCLASS.
+```
