@@ -1,0 +1,71 @@
+```abap
+*&---------------------------------------------------------------------*
+*& Report Z03
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT Z05.
+
+INCLUDE ZTEST_ZSTRAVELAG02_TOP.
+INCLUDE ZTEST_ZSTRAVELAG02_SEL.
+INCLUDE ZTEST_ZSTRAVELAG02_C01.
+INCLUDE ZTEST_ZSTRAVELAG02_F01.
+INCLUDE ZTEST_ZSTRAVELAG02_I01.
+INCLUDE ZTEST_ZSTRAVELAG02_O01.
+
+
+
+*&=====================================================================*
+*& INITIALIZATION
+*&=====================================================================*
+INITIALIZATION.
+  PERFORM SET_FUNCTION_KEY.   " ZABAP_08_SEL에서 만든 기능 키 버튼을 설정하는 함수 호출.
+
+
+*&=====================================================================*
+*& AT SELECTION-SCREEN
+*&=====================================================================*
+AT SELECTION-SCREEN.          " 검색화면에서 일어나는 모든 이벤트를 받아온다.
+  PERFORM ACT_FUNCTION_KEY.   " 검색화면에서 버튼을 눌렀을때 이벤트를 모두 받아온다.
+
+
+" AT SELECTION-SCREEN ON VALUE-REQUEST
+" : 화면의 특정 필드 옆에 있는 'F4 도움말' 아이콘을 클릭하거나, 필드에 커서를 두고 F4 키를 눌렀을 때 발생하는 이벤트.
+"   이 이벤트가 P_FILE이라는 이름의 입력 필드에 대해서만 발생하도록 대상을 지정.
+
+" 파일 다이얼로그를 도움말 형태로 등록.
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR P_FILE.
+  PERFORM GET_FILE_PATH.  " P_FILE 입력 필드 옆의 F4 버튼을 누르면, 일반적인 F4 도움말(데이터 검색) 대신 PERFORM GET_FILE_PATH를 실행해서 파일 탐색기 창이 나타나게 난다.
+
+*&=====================================================================*
+*& START-OF-SELECTION
+*&=====================================================================*
+START-OF-SELECTION.
+
+IF r1 = 'X'.
+    PERFORM CHECK_BEFORE_PROCESS. " P_FILE 에 들어간 경로를 체크하는 함수 호출.
+* 파일 업로드 진행
+    PERFORM UPLOAD_FROM_EXCEL.    " 엑셀에 들어간 데이터를 여기서 선언한 테이블로 옮겨주는 작업.
+    PERFORM GET_DATA.             " 엑셀 업로드할거를 오류 검증    =>> GT_ZSC를 출력하기위해서 만들고 있다.
+ELSEIF r2 = 'X'.
+    PERFORM GET_NEEDED_DATA.      " 전체 조회 및 편집. 업로드한 테이블 데이터 불러오는 부분 ZSCARR =>> GT_ZSCARR를 출력하기 위해서 만들고 있다.
+ELSEIF r3 = 'X'.
+    PERFORM DEL_DATA.             " 삭제
+ENDIF.
+
+*&=====================================================================*
+*& END-OF-SELECTION
+*&=====================================================================*
+END-OF-SELECTION.
+IF r1 ='X'.
+  CALL SCREEN 100.                " GT_ZSC 출력
+ELSEIF r2 = 'X'.
+  " 수정
+  IF GT_TABLE IS NOT INITIAL.
+    CALL SCREEN 100.              " GT_TABLE (ZSTRAVELAG 테이블) 출력
+  ELSE.
+    MESSAGE '조회할 데이터가 없습니다.' TYPE 'I'.
+  ENDIF.
+
+ENDIF.
+```
