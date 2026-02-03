@@ -1,0 +1,72 @@
+```abap
+*&---------------------------------------------------------------------*
+*& Include          Z03_O01
+*&---------------------------------------------------------------------*
+
+*&---------------------------------------------------------------------*
+*& Module STATUS_0100 OUTPUT
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+MODULE status_0100 OUTPUT.
+  DATA: TITLE TYPE STRING.
+  DATA: TLINE TYPE I.
+
+  REFRESH fcode.
+  CLEAR wa_fcode.
+
+  IF r1 = 'X'.
+
+    wa_fcode = 'EDIT'.
+    APPEND wa_fcode TO fcode.
+
+    wa_fcode = 'DEL'.
+    APPEND wa_fcode TO fcode.
+
+    SET PF-STATUS '100' EXCLUDING fcode.  " 버튼/둘바 만드는 부분
+
+    " 수정
+    TITLE = '테이블 업로드'.
+    " 수정
+    DESCRIBE TABLE GT_ZSC LINES TLINE.
+  ELSEIF r2 = 'X'.
+
+    SET PF-STATUS '100'.
+
+    " 수정
+    TITLE = '테이블 조회 및 편집'.
+
+    " 수정
+    DESCRIBE TABLE GT_TABLE LINES TLINE.
+  ELSE.
+  ENDIF.
+
+  SET TITLEBAR '100' WITH TITLE TLINE.          " 타이틀 만들기.
+
+* WITH GV_TITLE.
+ENDMODULE.
+*&---------------------------------------------------------------------*
+*& Module SET_ALV_0100 OUTPUT
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+MODULE set_alv_0100 OUTPUT.
+*  IF GO_DOCKING IS INITIAL.
+  IF GO_CUSTOM IS INITIAL.          " 최초출력일때
+* OBJECT*INSTANCE 생성
+    PERFORM create_object_instance. " 화면 할당하고 어디다 출력할지
+
+* FIELD CATALOG
+    PERFORM set_fildcat.            " 필드카탈로그 만들고
+
+* LAYOUT
+    PERFORM set_layout.             " 레이아웃 만들고
+
+* DISPLAY ALV
+    PERFORM display_alv_0100.       " ALV 출력하고
+
+  ELSE.
+    PERFORM refresh_data.
+  ENDIF.
+ENDMODULE.
+```
