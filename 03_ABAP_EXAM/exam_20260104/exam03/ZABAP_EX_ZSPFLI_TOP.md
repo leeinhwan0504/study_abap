@@ -1,3 +1,4 @@
+```abap
 *&---------------------------------------------------------------------*
 *& Include          ZABAP_EX_ZSTRAVELAG01_TOP
 *&---------------------------------------------------------------------*
@@ -76,4 +77,6 @@ DATA: fcode    TYPE TABLE OF sy-ucomm,
 
 DATA: it_cp       TYPE TABLE OF ZSPFLI WITH HEADER LINE,      " 수정5
       it_changes  TYPE TABLE OF ZSPFLI WITH HEADER LINE,      " 수정6
+
       it_deletes  TYPE TABLE OF ZSPFLI WITH HEADER LINE.      " 수정7
+```
